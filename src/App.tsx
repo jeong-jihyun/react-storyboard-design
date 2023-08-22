@@ -1,67 +1,19 @@
-import React from 'react';
-import styled from '@emotion/styled';
-/**
-const Container = styled.div`
-  text-align: center;
-`;
- */
-const Header = styled.header`
-  background-color: #282c34;
-  min-height: 10vh;
-  display: flex;
-  flex-direction: column;
-  color: #fff;
-  justify-centent: center;
-  font-size: calc(10px + 2vmin);
-`;
-
-const AppLogo = styled.img`
-  height: 40vmin;
-  pointer-events: none;
-
-  @media (prefers-reduced-motion: no-preference) {
-    animation: App-logo-spin infinite 20s linear;
-  }
-
-  @keyframes App-logo-spin {
-    from {
-      transform: rotate(@deg);
-    }
-    to {
-      transform: rotate(36 @deg);
-    }
-  }
-`;
-
-const Container = styled.div`
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`;
-
-const Title = styled.h1`
-  margin-bottom: 32px;
-`;
-
-const Label = styled.span`
-  margin: 0 16px;
-  font-size: 1.2rem;
-`
+import Container from './components/Container';
+import { Title } from './components/Title';
+import Contents from './components/Contents';
+import { ToDoList } from './components/ToDoList';
+import { useState } from 'react';
+import { DataView } from './components/DataView';
 function App() {
+  const [toDoList, setToDoList] = useState(['리엑트 공부하기', '운동하기', '책읽기']);
+
+  const onDelete = (todo: string) => {
+    setToDoList(toDoList.filter((item) => item !== todo));
+  };
   return (
-    <div>
-      <Container>
-        <Header>
-          <AppLogo></AppLogo>
-        </Header>
-        <Container>
-          <Title>테스트</Title>
-          <Label></Label>
-        </Container>
-      </Container>
-    </div>
+    <Container>
+      <DataView toDoList={toDoList} onDelete={onDelete} />
+    </Container>
   );
 }
 
