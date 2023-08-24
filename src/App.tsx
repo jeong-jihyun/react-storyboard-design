@@ -1,7 +1,11 @@
 import styled from '@emotion/styled';
-import { DataView } from './components/DataView';
-import { InputContainer } from './components/InputContainer';
+import { DataView } from './page/DataView';
+
+//import { InputContainer } from './components/InputContainer';
 import { ToDoListContextProvider } from './contexts/ToDoList';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import { ToDoInput } from './page/ToDoInput';
+import { Header } from './components/Header';
 
 const Container = styled.div`
   height: 100vh;
@@ -11,13 +15,29 @@ const Container = styled.div`
   justify-content: center;
   background-color: #eeeeee;
 `;
-
+const NotFound = styled.div`
+  text-align: center;
+`;
 function App() {
   return (
     <Container>
       <ToDoListContextProvider>
-        <DataView />
-        <InputContainer />
+        <Router>
+          <Header />
+          <Routes>
+            <Route path="/" element={<DataView />} />
+            <Route path="/add" element={<ToDoInput />} />
+            <Route
+              path="*"
+              element={
+                <NotFound>
+                  404
+                  <br /> Page Not Found
+                </NotFound>
+              }
+            />
+          </Routes>
+        </Router>
       </ToDoListContextProvider>
     </Container>
   );
