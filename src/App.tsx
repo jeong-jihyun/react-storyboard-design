@@ -5,7 +5,7 @@ import { DataView } from './page/DataView';
 import { ToDoListContextProvider } from './contexts/ToDoList';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import { ToDoInput } from './page/ToDoInput';
-import { BlogPost } from './page/BlogPost';
+import { BlogPage } from './page/BlogPage';
 import { Header } from './components/Header';
 
 const Container = styled.div`
@@ -30,7 +30,7 @@ function App() {
           <Routes>
             <Route path="/" element={<DataView />} />
             <Route path="/add" element={<ToDoInput />} />
-            <Route path="/BlogPost" element={<BlogPost/>} />
+            <Route path="/BlogPage" element={<BlogPage/>} />
             <Route
               path="*"
               element={
