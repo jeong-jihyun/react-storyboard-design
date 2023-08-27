@@ -7,6 +7,7 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import { ToDoInput } from './page/ToDoInput';
 import { BlogPage } from './page/BlogPage';
 import { Header } from './components/Header';
+import { Home } from './page/Home';
 
 const Container = styled.div`
   height: 100vh;
@@ -31,6 +32,7 @@ function App() {
             <Route path="/" element={<DataView />} />
             <Route path="/add" element={<ToDoInput />} />
             <Route path="/BlogPage" element={<BlogPage/>} />
+            <Route path="/CounterApp" element={<Home/>} />
             <Route
               path="*"
               element={

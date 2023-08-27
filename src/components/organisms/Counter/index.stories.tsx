@@ -1,19 +1,18 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Button } from '.';
+import { Counter } from '.';
 
 const meta = {
-  title: 'Atoms/Button',
-  component: Button,
-} satisfies Meta<typeof Button>;
+  title: 'Organisms/Counter',
+  component: Counter,
+} satisfies Meta<typeof Counter>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default : Story = {
   args: {
-    label: 'Button',
-    color: '#4d61d6',
-    height: '41px'
-  }
+    label: '라벨',
+  },
 };
+
