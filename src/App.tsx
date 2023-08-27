@@ -5,6 +5,7 @@ import { DataView } from './page/DataView';
 import { ToDoListContextProvider } from './contexts/ToDoList';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import { ToDoInput } from './page/ToDoInput';
+import { BlogPost } from './page/BlogPost';
 import { Header } from './components/Header';
 
 const Container = styled.div`
@@ -14,7 +15,9 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   background-color: #eeeeee;
+  overflow: scroll;
 `;
+
 const NotFound = styled.div`
   text-align: center;
 `;
@@ -27,6 +30,7 @@ function App() {
           <Routes>
             <Route path="/" element={<DataView />} />
             <Route path="/add" element={<ToDoInput />} />
+            <Route path="/BlogPost" element={<BlogPost/>} />
             <Route
               path="*"
               element={

@@ -35,6 +35,7 @@ export const Header = () => {
       <Title>블로그</Title>
       <StyledLink to="/">할일목록앱</StyledLink>
       <StyledLink to="/add">할일추가</StyledLink>
+      <StyledLink to="/BlogPost">블로그목록</StyledLink>
     </Container>
   );
 };
