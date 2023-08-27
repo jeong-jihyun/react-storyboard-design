@@ -1,13 +1,13 @@
 import styled from '@emotion/styled';
-import { DataView } from './page/DataView';
+import { DataView } from './pages/DataView';
 
 //import { InputContainer } from './components/InputContainer';
 import { ToDoListContextProvider } from './contexts/ToDoList';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import { ToDoInput } from './page/ToDoInput';
-import { BlogPage } from './page/BlogPage';
+import { ToDoInput } from './pages/ToDoInput';
+import { BlogPage } from './pages/BlogPage';
 import { Header } from './components/Header';
-import { Home } from './page/Home';
+import { Home } from './pages/Home';
 
 const Container = styled.div`
   height: 100vh;
