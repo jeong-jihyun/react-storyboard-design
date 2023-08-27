@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Title } from '../../components/Title';
+import { Title } from '../../components/atoms/Title';
 import { ToDoList } from '../../components/ToDoList';
 // ShowInputButton Add
 // useNavigate Add

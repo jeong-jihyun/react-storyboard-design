@@ -1,8 +1,8 @@
 import { useState, useContext } from 'react';
 import styled from '@emotion/styled';
 import { TextInput } from '../../components/TextInput';
-import { Button } from '../../components/Button';
-import { Title } from '../../components/Title';
+import { Button } from '../../components/atoms/Button';
+import { Title } from '../../components/atoms/Title';
 import { ToDoListContext } from '../../contexts/ToDoList';
 import { useNavigate } from 'react-router-dom';
 import { ShowInputButton } from '../../components/ShowInputButton';
