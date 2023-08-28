@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styled from '@emotion/styled';
-import { Button } from '../../components/BlogButton';
+import { Button } from '../BlogButton';
 
 const Container = styled.div`
   position: absolute;

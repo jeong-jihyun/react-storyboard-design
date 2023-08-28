@@ -1,11 +1,11 @@
 import { useState, useContext } from 'react';
 import styled from '@emotion/styled';
-import { TextInput } from '../../components/TextInput';
+import { TextInput } from '../../components/atoms/TextInput';
 import { Button } from '../../components/atoms/Button';
 import { Title } from '../../components/atoms/Title';
 import { ToDoListContext } from '../../contexts/ToDoList';
 import { useNavigate } from 'react-router-dom';
-import { ShowInputButton } from '../../components/ShowInputButton';
+import { ShowInputButton } from '../../components/atoms/ShowInputButton';
 
 const Container = styled.div`
   display: flex;

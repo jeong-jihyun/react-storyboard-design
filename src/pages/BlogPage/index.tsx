@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import styled from '@emotion/styled';
-import { BlogPost } from '../../components/BlogPost';
-import { Button } from '../../components/BlogButton';
-import { Form } from '../../components/BlogForm';
+import { BlogPost } from '../../components/atoms/BlogPost';
+import { Button } from '../../components/atoms/BlogButton';
+import { Form } from '../../components/atoms/BlogForm';
 
 const Container = styled.div`
   background-color: #fff;

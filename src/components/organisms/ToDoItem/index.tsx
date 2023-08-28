@@ -1,5 +1,7 @@
 import styled from '@emotion/styled';
-import { Button } from '../atoms/Button';
+
+import { Button } from '../../atoms/Button';
+import { Label } from '../../atoms/Label';
 
 const Container = styled.div`
   display: flex;
@@ -8,11 +10,11 @@ const Container = styled.div`
   margin-bottom: 16px;
 `;
 
-const Label = styled.div`
-  flex: 1;
-  font-size: 1.2rem;
-  margin-right: 16px;
-`;
+// const Label = styled.div`
+//   flex: 1;
+//   font-size: 1.2rem;
+//   margin-right: 16px;
+// `;
 
 interface Props {
   readonly label: string;
@@ -22,7 +24,7 @@ interface Props {
 export const ToDoItem = ({ label, onDelete }: Props) => {
   return (
     <Container>
-      <Label>{label}</Label>
+      <Label label={label}></Label>
       <Button label="삭제" onClick={onDelete} />
     </Container>
   );

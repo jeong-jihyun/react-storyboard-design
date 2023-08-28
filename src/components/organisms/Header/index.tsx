@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
+import { AppTitle } from '../../atoms/AppTitle';
 
 const Container = styled.div`
   position: absolute;
@@ -26,17 +27,10 @@ const StyledLink = styled(Link)`
   margin-left: 10px;
 `;
 
-const Title = styled.div`
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #fff;
-`;
-
 export const Header = () => {
   return (
     <Container>
-      <Title>블로그</Title>
-      <StyledLink to="/">할일목록앱</StyledLink>
+      <AppTitle/>
       <StyledLink to="/add">할일추가</StyledLink>
       <StyledLink to="/BlogPage">블로그목록</StyledLink>
       <StyledLink to="/CounterApp">카운터앱</StyledLink>

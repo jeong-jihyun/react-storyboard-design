@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Button } from '../atoms/Button';
+import { Button } from '../Button';
 
 const Container = styled.div`
   position: absolute;
