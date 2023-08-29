@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import styled from '@emotion/styled';
-import { BlogPost } from '../../components/atoms/BlogPost';
-import { Button } from '../../components/atoms/BlogButton';
-import { Form } from '../../components/atoms/BlogForm';
+import { BlogPost } from '../../components/templates/BlogPost';
+import { BlogButton } from '../../components/atoms/BlogButton';
+import { BlogForm } from '../../components/templates/BlogForm';
 
 const Container = styled.div`
   background-color: #fff;
@@ -47,9 +47,9 @@ export const BlogPage = () => {
         <BlogPost key={post.id} title={post.title} body={post.body} />
       ))}
       <ButtonContainer>
-        <Button label="등록" onClick={() => setShowForm(true)} />
+        <BlogButton label="등록" onClick={() => setShowForm(true)} />
       </ButtonContainer>
-      {showForm && <Form onClose={() => setShowForm(false)} />}
+      {showForm && <BlogForm onClose={() => setShowForm(false)} />}
     </Container>
   );
 };

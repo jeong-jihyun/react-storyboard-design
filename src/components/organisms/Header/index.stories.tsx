@@ -6,6 +6,7 @@ import { BrowserRouter } from 'react-router-dom';
 const meta = {
   title: 'Organisms/Header',
   component: Header,
+  tags: ['autodocs'],
   decorators:[
     (Header)=>(
       <BrowserRouter>

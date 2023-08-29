@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 //import { InputContainer } from './components/InputContainer';
 import { ToDoListContextProvider } from './contexts/ToDoList';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import { ToDoInput } from './pages/ToDoInput';
+import { ToDoInput } from './components/templates/ToDoInput';
 import { BlogPage } from './pages/BlogPage';
 import { Header } from './components/organisms/Header';
 import { Home } from './pages/Home';

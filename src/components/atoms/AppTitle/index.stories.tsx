@@ -6,6 +6,7 @@ import { BrowserRouter } from 'react-router-dom';
 const meta = {
   title: 'Atoms/AppTitle',
   component: AppTitle,
+  tags: ['autodocs'],
   decorators:[
     (AppTitle)=>(
       <BrowserRouter>

@@ -1,19 +1,19 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Counter } from '.';
+import { BlogPost } from '.';
 
 const meta = {
-  title: 'Organisms/Counter',
-  component: Counter,
+  title: 'Templates/BlogPost',
+  component: BlogPost,
   tags: ['autodocs'],
-} satisfies Meta<typeof Counter>;
+} satisfies Meta<typeof BlogPost>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default : Story = {
   args: {
-    label: '라벨',
-  },
+    title: '타이틀',
+    body: '본문 내용',
+  }
 };
-

@@ -5,6 +5,7 @@ import { Home } from '.';
 const meta = {
   title: 'Pages/Home',
   component: Home,
+  tags: ['autodocs'],
 } satisfies Meta<typeof Home>;
 
 export default meta;

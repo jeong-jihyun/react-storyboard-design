@@ -5,6 +5,7 @@ import { Count } from '.';
 const meta = {
   title: 'Atoms/Count',
   component: Count,
+  tags: ['autodocs'],
 } satisfies Meta<typeof Count>;
 
 export default meta;

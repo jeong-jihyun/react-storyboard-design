@@ -5,6 +5,7 @@ import { ToDoList } from '.';
 const meta = {
   title: 'Templates/ToDoList',
   component: ToDoList,
+  tags: ['autodocs'],
 } satisfies Meta<typeof ToDoList>;
 
 export default meta;

@@ -5,6 +5,7 @@ import { Label } from '.';
 const meta = {
   title: 'Atoms/Label',
   component: Label,
+  tags: ['autodocs'],
 } satisfies Meta<typeof Label>;
 
 export default meta;

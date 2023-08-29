@@ -1,18 +1,18 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Input } from '.';
+import { TextInput } from '.';
 
 const meta = {
-  title: 'Atoms/Input',
-  component: Input,
+  title: 'Atoms/TextInput',
+  component: TextInput,
   tags: ['autodocs'],
-} satisfies Meta<typeof Input>;
+} satisfies Meta<typeof TextInput>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    value:'리엑트 공부'
+    value: '텍스트 인풋',
   },
 };

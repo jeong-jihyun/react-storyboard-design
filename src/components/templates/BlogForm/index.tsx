@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styled from '@emotion/styled';
-import { Button } from '../BlogButton';
+import { BlogButton } from '../../atoms/BlogButton';
 
 const Container = styled.div`
   position: absolute;
@@ -62,7 +62,7 @@ interface Props {
   readonly onClose?: () => void;
 }
 
-export const Form = ({ onClose }: Props) => {
+export const BlogForm = ({ onClose }: Props) => {
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
 
@@ -105,8 +105,8 @@ export const Form = ({ onClose }: Props) => {
           <Input value={body} onChange={(e) => setBody(e.target.value)} />
         </InputGroup>
         <Actions>
-          <Button label="등록하기" onClick={registerPost} />
-          <Button label="닫기" color="#304FFE" onClick={onClose} />
+          <BlogButton label="등록하기" onClick={registerPost} />
+          <BlogButton label="닫기" color="#304FFE" onClick={onClose} />
         </Actions>
       </Contents>
     </Container>

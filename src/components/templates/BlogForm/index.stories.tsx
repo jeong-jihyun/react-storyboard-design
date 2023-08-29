@@ -1,18 +1,16 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Input } from '.';
+import { BlogForm } from '.';
 
 const meta = {
-  title: 'Atoms/Input',
-  component: Input,
+  title: 'Templates/BlogForm',
+  component: BlogForm,
   tags: ['autodocs'],
-} satisfies Meta<typeof Input>;
+} satisfies Meta<typeof BlogForm>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: {
-    value:'리엑트 공부'
-  },
+  args: {},
 };

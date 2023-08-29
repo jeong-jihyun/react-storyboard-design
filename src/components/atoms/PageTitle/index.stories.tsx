@@ -5,6 +5,7 @@ import { PageTitle } from '.';
 const meta = {
   title: 'Atoms/PageTitle',
   component: PageTitle,
+  tags: ['autodocs'],
 } satisfies Meta<typeof PageTitle>;
 
 export default meta;

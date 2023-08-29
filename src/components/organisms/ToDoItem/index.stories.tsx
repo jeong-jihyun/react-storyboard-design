@@ -5,6 +5,7 @@ import { ToDoItem } from '.';
 const meta = {
   title: 'Organisms/ToDoItem',
   component: ToDoItem,
+  tags: ['autodocs'],
 } satisfies Meta<typeof ToDoItem>;
 
 export default meta;

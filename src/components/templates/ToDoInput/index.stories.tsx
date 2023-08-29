@@ -1,24 +1,24 @@
 import type { Meta, StoryObj } from '@storybook/react';
-
-import { InputToDo } from '.';
+import { ToDoInput } from '.';
 import { BrowserRouter } from 'react-router-dom';
 
 const meta = {
-  title: 'Organisms/InputToDo',
-  component: InputToDo,
+  title: 'Templates/ToDoInput',
+  component: ToDoInput,
   tags: ['autodocs'],
-  decorators:[
-    (InputToDo)=>(
+  decorators: [
+    (ToDoInput) => (
       <BrowserRouter>
-        <InputToDo/>
+        <ToDoInput />
       </BrowserRouter>
-    )
+    ),
   ],
-} satisfies Meta<typeof InputToDo>;
+} satisfies Meta<typeof ToDoInput>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
+//  샘플 데이터를 생성
 export const Default: Story = {
   args: {},
 };

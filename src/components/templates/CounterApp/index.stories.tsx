@@ -5,6 +5,7 @@ import { CounterApp } from '.';
 const meta = {
   title: 'Templates/CounterApp',
   component: CounterApp,
+  tags: ['autodocs'],
 } satisfies Meta<typeof CounterApp>;
 
 export default meta;
