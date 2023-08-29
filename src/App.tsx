@@ -9,6 +9,7 @@ import { BlogPage } from './pages/BlogPage';
 import { Header } from './components/organisms/Header';
 import { Home } from './pages/Home';
 import { ToDoListPage } from './pages/ToDoListPage';
+import { TestPage } from './pages/TestPage';
 
 const Container = styled.div`
   height: 100vh;
@@ -34,6 +35,7 @@ function App() {
             <Route path="/add" element={<ToDoInput />} />
             <Route path="/BlogPage" element={<BlogPage/>} />
             <Route path="/CounterApp" element={<Home/>} />
+            <Route path="/test" element={<TestPage/>} />
             <Route
               path="*"
               element={
