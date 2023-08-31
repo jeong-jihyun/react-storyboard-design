@@ -12,9 +12,9 @@ export const Counter = () => {
   const [count, setCount] = useState(0);
   return (
     <Container>
-      <Button label="-" onClick={() => setCount(count - 1)} />
+      <Button label="-" onClick={() => setCount(count - 1)} className="btn-primary"/>
       <Count value={count} />
-      <Button label="+" onClick={() => setCount(count + 1)} />
+      <Button label="+" onClick={() => setCount(count + 1)} className="btn-primary" />
     </Container>
   );
 };

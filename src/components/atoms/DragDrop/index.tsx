@@ -1,5 +1,4 @@
 import type { DragEvent } from 'react';
-import { P } from '../P';
 import styled from '@emotion/styled';
 const Container = styled.div`
   display: flex;

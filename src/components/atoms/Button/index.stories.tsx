@@ -14,14 +14,10 @@ type Story = StoryObj<typeof meta>;
 export const BlueButton : Story = {
   args: {
     label: '추가',
-    color: '#4d61d6',
-    height: '41px'
   }
 };
 export const RedButton : Story = {
   args: {
     label: '삭제',
-    color: '#ff0000',
-    height: '41px'
   }
 };

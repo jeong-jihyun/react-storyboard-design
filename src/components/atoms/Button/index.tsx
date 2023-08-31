@@ -1,41 +1,60 @@
-import styled from '@emotion/styled';
+// import styled from '@emotion/styled';
+import { ButtonHTMLAttributes, DetailedHTMLProps, FC, PropsWithChildren } from 'react';
 
-interface ContainerProps {
-  readonly color: string;
-  readonly height: string;
-}
+// interface ContainerProps {
+//   readonly color: string;
+//   readonly height: string;
+// }
 
-const Container = styled.button<ContainerProps>`
-  border: 0;
-  color: #ffffff;
-  background-color: ${(props) => props.color};
-  cursor: pointer;
-  padding: 8px 16px;
-  border-radius: 4px;
-  min-height: ${(props) => props.height};
-  margin-left: 7px;
-  
-  &:hover {
-    background-color: ${(props) => props.color};
-    opacity: 0.8;
-  }
+// const Container = styled.div<ContainerProps>`
+//   border: 0;
+//   color: #ffffff;
+//   background-color: ${(props) => props.color};
+//   cursor: pointer;
+//   padding: 8px 16px;
+//   border-radius: 4px;
+//   min-height: ${(props) => props.height};
+//   margin-left: 7px;
 
-  &:active {
-    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2);
-  }
-`;
+//   &:hover {
+//     background-color: ${(props) => props.color};
+//     opacity: 0.8;
+//   }
 
-interface Props {
+//   &:active {
+//     box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2);
+//   }
+// `;
+
+export type ReactButtonProps = DetailedHTMLProps<
+  ButtonHTMLAttributes<HTMLButtonElement>,
+  HTMLButtonElement
+>;
+
+export type ButtonProps = ReactButtonProps & {
   readonly label: string;
-  readonly color?: string;
-  readonly height?: string;
+  readonly className?: string;
   readonly onClick?: () => void;
-}
+};
 
-export const Button = ({ label, color = '#ff5722', height = '41px', onClick }: Props) => {
+// interface Props {
+//   readonly label: string;
+//   readonly color?: string;
+//   readonly height?: string;
+//   readonly onClick?: () => void;
+// }
+
+export const Button: FC<PropsWithChildren<ButtonProps>> = ({
+  label,
+  onClick,
+  className : _className,
+  ...buttonProps
+}) => {
+  const className = ['btn', _className].join(' ');
+  console.log(buttonProps);
   return (
-    <Container color={color} onClick={onClick} height={height}>
+    <button {...buttonProps} className={className} onClick={onClick}>
       {label}
-    </Container>
+    </button>
   );
 };
