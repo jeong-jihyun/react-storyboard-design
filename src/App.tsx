@@ -10,6 +10,7 @@ import { Header } from './components/organisms/Header';
 import { Home } from './pages/Home';
 import { ToDoListPage } from './pages/ToDoListPage';
 import { TestPage } from './pages/TestPage';
+import { Footer } from './components/organisms/Footer';
 
 const Container = styled.div`
   height: 100vh;
@@ -46,6 +47,7 @@ function App() {
               }
             />
           </Routes>
+          <Footer/>
         </Router>
       </ToDoListContextProvider>
     </Container>

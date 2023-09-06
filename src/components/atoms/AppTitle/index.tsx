@@ -2,31 +2,31 @@ import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 
 const Container = styled.div`
-  color: #fff;
-  font-size: 20px;
+  color: #000;
+  font-size: 0.8rem;
   
   cursor: pointer;
   /* unvisited link */
-  a:link {
-    color: #fff;
+  &:link {
+    color: #000;
     text-decoration: none;
   }
 
   /* visited link */
-  a:visited {
-    color: #fff;
+  &:visited {
+    color: #000;
     text-decoration: none;
   }
 
   /* mouse over link */
-  a:hover {
-    color: #fff;
+  &:hover {
+    color: #000;
     text-decoration: none;
   }
 
   /* selected link */
-  a:active {
-    color: #fff;
+  &:active {
+    color: #000;
     text-decoration: none;
   }
 `;

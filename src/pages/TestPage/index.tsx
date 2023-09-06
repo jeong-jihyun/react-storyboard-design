@@ -14,7 +14,7 @@ const Container = styled.div`
 `
 
 export const TestPage = () => {
-  const avatar = D.range(0, 10).map(index => (
+    const avatar = D.range(0, 10).map(index => (
     <Avatar
       className="inline-block -ml-6 border-4 border-white"
       key={index}
