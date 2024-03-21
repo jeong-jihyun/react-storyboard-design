@@ -4,9 +4,9 @@ interface IProps {
   children: React.ReactNode
 }
 
-export const ModalPotal: React.FC<IProps> = ({children}) => {
+export const ModalPotal: React.FC<IProps> = ({children}:IProps) => {
   const ref = useRef<Element | null>()
-  const [mounted, setMounted] = useState(false)
+  const [mounted] = useState(false)
 
   useEffect(() => {
     if (document) {
@@ -16,5 +16,9 @@ export const ModalPotal: React.FC<IProps> = ({children}) => {
   }, [])
 
   if (ref.current && mounted)
-  return ()
+  return (
+    <>
+      {children}
+    </>
+  )
 }
